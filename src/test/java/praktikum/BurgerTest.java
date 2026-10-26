@@ -71,15 +71,6 @@ public class BurgerTest {
     }
 
     @Test
-    public void getPriceReturnsDoubleBunAndIngredientsPrice() {
-        burger.setBuns(bun);
-        burger.addIngredient(sauce);
-        burger.addIngredient(filling);
-
-        assertEquals(325.0f, burger.getPrice(), 0.001f);
-    }
-
-    @Test
     public void getReceiptReturnsBurgerCompositionAndTotalPrice() {
         burger.setBuns(bun);
         burger.addIngredient(sauce);

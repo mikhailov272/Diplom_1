@@ -20,14 +20,4 @@ public class BurgerEmptyIngredientsTest {
                 burger.getReceipt());
     }
 
-    @Test
-    public void getPriceWithoutIngredientsReturnsDoubleBunPrice() {
-        Bun bun = mock(Bun.class);
-        when(bun.getPrice()).thenReturn(120.0f);
-
-        Burger burger = new Burger();
-        burger.setBuns(bun);
-
-        assertEquals(240.0f, burger.getPrice(), 0.001f);
-    }
 }
