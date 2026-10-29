@@ -23,8 +23,8 @@ mvn clean verify
 Проверка 29.10.2026: 16 тестов, 0 ошибок, 0 пропусков. `mvn clean verify`
 завершился успешно. Отчёт JaCoCo показал 100% покрытия класса Burger.
 
-Сохранённый отчёт этого прогона приложен в [jacoco-report.zip](jacoco-report.zip).
-Распакуйте архив и откройте `index.html` в браузере. В архив также включены
+Сохранённый отчёт этого прогона приложен в папке [jacoco](jacoco/).
+Откройте `jacoco/index.html` в браузере. В папку также включены
 машиночитаемые отчёты `jacoco.xml` и `jacoco.csv`.
 
 Исходный проект: https://github.com/yandex-praktikum/QA-java-diplom-1
