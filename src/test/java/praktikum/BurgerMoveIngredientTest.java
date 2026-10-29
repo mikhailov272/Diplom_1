@@ -2,6 +2,8 @@ package praktikum;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -38,9 +40,9 @@ public class BurgerMoveIngredientTest {
             burger.addIngredient(ingredient);
         }
         burger.moveIngredient(from, to);
-        assertEquals(3, burger.ingredients.size());
-        for (int i = 0; i < expectedOrder.length; i++) {
-            assertEquals(ingredients[expectedOrder[i]], burger.ingredients.get(i));
-        }
+        List<Ingredient> expected = Arrays.stream(expectedOrder)
+                .mapToObj(index -> ingredients[index])
+                .collect(Collectors.toList());
+        assertEquals(expected, burger.ingredients);
     }
 }

@@ -1,5 +1,7 @@
 package praktikum;
 
+import java.util.Arrays;
+import java.util.Collections;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,8 +46,7 @@ public class BurgerTest {
     public void addIngredientAddsIngredientToEnd() {
         burger.addIngredient(sauce);
 
-        assertEquals(1, burger.ingredients.size());
-        assertEquals(sauce, burger.ingredients.get(0));
+        assertEquals(Collections.singletonList(sauce), burger.ingredients);
     }
 
     @Test
@@ -55,8 +56,7 @@ public class BurgerTest {
 
         burger.removeIngredient(0);
 
-        assertEquals(1, burger.ingredients.size());
-        assertEquals(filling, burger.ingredients.get(0));
+        assertEquals(Collections.singletonList(filling), burger.ingredients);
     }
 
     @Test
@@ -66,8 +66,7 @@ public class BurgerTest {
 
         burger.moveIngredient(0, 1);
 
-        assertEquals(filling, burger.ingredients.get(0));
-        assertEquals(sauce, burger.ingredients.get(1));
+        assertEquals(Arrays.asList(filling, sauce), burger.ingredients);
     }
 
     @Test
